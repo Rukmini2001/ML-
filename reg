@@ -1,0 +1,39 @@
+import numpy as np
+import pandas as py
+from matplotlib import pyplot as plt
+from sklearn.datasets importload_boston 
+boston = load_bosto()
+print (boston.DESCR)
+dataset = boston.data
+from name,index,in enumerate(boston.feature-name):
+print(index,name)
+data=dataset[;12]reshape(-1,1)
+np.shape(dataset)
+target = boston.target reshape(-1,1)
+np.shapw(target)
+%matplotlib inline
+plt.scatter(data,target,color='green')
+plt.xlabel('low income population')
+plt.ylabel('cost of house')
+plt.show()
+from sklearn_model import Linear Regression
+re=Linear Regression()
+reg.fit(data,target)
+pred=reg,predict(data)
+plt.scatter(data,target,color='red')
+plt.scatter(data,pred,color='green')
+plt.xlabel('low income population')
+plt.ylabel('cost of house')
+plt.show()
+from sklearn.preprocessing import polynomialFeatures
+from sklearn.pipeline import make_pipeline
+model=make_pipeline(polynomial Feature(3),reg)
+model.fit(data,target)
+pred=model.predict(data)
+plt.scatter(data,target,color='red')
+plt.scatter(data,pred,color='green')
+plt.xlabel('low income population')
+plt.ylabel('cost of house')
+plt.show()
+from sklearn metrics import r2_score
+r2_score(pred,target)
